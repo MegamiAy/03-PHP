@@ -65,12 +65,22 @@ Variáveis com diversas chaves/dados
 	> $nome = array('Junior', 'Marcelo', 'Felipe', 'Kauan');
 - variável, array( [] )
 	> $nome[] = 'Junior';
+ 
  	> $nome[] = 'Marcelo';
 - variável, recebe(=), array
 	> $nome = ['Junior', 'Marcelo', 'Felipe', 'Kauan';
+- variável, onde guarda, recebe(=), array
+	> $info['nome'] = 'Guilherme';
+
+ 	> $info['idade'] = 23;
+
 
  - as posições da array se iniciam em 0... **ex:** `[0, 1, 2, 3]` = 4 valores
  - para puxar apenas um dado de dentro dessa array, você pega a posição
 	> echo $nome['0']; -> Mostrará o nome Junior
 
  	> echo $nome['2']; -> Mostrará o nome Felipe
+- para puxar apenas um dado recebido, se usa o nome de onde foi armazenado dentro da array
+	> echo info['nome']; -> Mostrará o nome Guilherme
+
+ 	> echo info['idade']; -> Mostrará a idade 23
