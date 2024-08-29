@@ -43,3 +43,17 @@ desta forma =
 -  Junior' -> conteúdo da constante
 -  define('NOME', 'Junior');
 	> echo NOME; -> Mostrará o conteúdo da constante NOME
+
+### detalhe sobre a constante, que a diferencia da variável
+- quando um valor/conteúdo é definido ele não pode ser alterado tentando definir outro
+- ex:
+	> define('NOME', 'Junior');
+ 	> define('NOME', 'Marcelo');
+- o valor inicial da constante é Junior, e não será alterado/substituido pelo Marcelo
+- por senso, a constante é criada com o nome dela sendo em maiúsculo
+
+## arrays em PHP
+
+### instanciada desta forma:
+- 
+	> 
