@@ -58,11 +58,16 @@ desta forma =
 ## arrays em PHP
 Variáveis com diversas chaves/dados
 
-### instanciada desta forma:
+### instanciada destas formas (todas funcionam):
 - array, dados dentro dela, separados por ,
 	> array('Junior', 'Marcelo', 'Felipe', 'Kauan');
 - variável que vai armazenar a array, recebe/seta(=) array
 	> $nome = array('Junior', 'Marcelo', 'Felipe', 'Kauan');
+- variável, array( [] )
+	> $nome[] = 'Junior';
+ 	> $nome[] = 'Marcelo';
+- variável, recebe(=), array
+	> $nome = ['Junior', 'Marcelo', 'Felipe', 'Kauan';
 
  - as posições da array se iniciam em 0... **ex:** `[0, 1, 2, 3]` = 4 valores
  - para puxar apenas um dado de dentro dessa array, você pega a posição
