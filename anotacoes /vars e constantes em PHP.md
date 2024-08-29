@@ -26,3 +26,20 @@ desta forma =
 - texto, ponto e variável
 	> 'texto'.$Variavel
 - o ponto (.) concatena
+
+### tipo boolean do PHP =
+- true = 1
+- false = 0
+
+## contantes em PHP
+
+### instanciada desta forma:
+- define, nome e conteúdo
+	> define('NOME', 'Junior');
+
+### Usando constante
+- define() -> func do PHP para definir o nome e conteúdo da constante
+- 'NOME', -> nome da constante. a vírgula espera um novo parâmetro (o conteúdo)
+-  Junior' -> conteúdo da constante
+-  define('NOME', 'Junior');
+	> echo NOME; -> Mostrará o conteúdo da constante NOME
