@@ -53,7 +53,15 @@ desta forma =
 - por senso, a constante é criada com o nome dela sendo em maiúsculo
 
 ## arrays em PHP
+Variáveis com diversas chaves/dados
 
 ### instanciada desta forma:
-- 
-	> 
+- array, dados dentro dela, separados por ,
+	> array('Junior', 'Marcelo', 'Felipe', 'Kauan');
+- variável que vai armazenar a array, recebe/seta(=) array
+	> $nome = array('Junior', 'Marcelo', 'Felipe', 'Kauan');
+
+ - as posições da array se iniciam em 0... **ex:** `[0, 1, 2, 3]` = 4 valores
+ - para puxar apenas um dado de dentro dessa array, você pega a posição
+	> echo $nome['0']; -> Mostrará o nome Junior
+ 	> echo $nome['2']; -> Mostrará o nome Felipe
