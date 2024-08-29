@@ -23,12 +23,6 @@
 
 > $var1 = $var2;
 
-### concatenação de variáveis
-desta forma =
-- texto, ponto e variável
-	> 'texto'.$Variavel
-- o ponto (.) concatena
-
 ### tipo boolean do PHP =
 - true = 1
 - false = 0
@@ -84,3 +78,11 @@ Variáveis com diversas chaves/dados
 	> echo info['nome']; -> Mostrará o nome Guilherme
 
  	> echo info['idade']; -> Mostrará a idade 23
+
+## concatenação de variáveis em PHP
+### usa desta forma =
+- texto, ponto e variável
+	> 'texto'.$Variavel
+- o ponto (.) concatena
+
+  
