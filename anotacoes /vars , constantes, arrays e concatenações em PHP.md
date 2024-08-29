@@ -79,15 +79,19 @@ Variáveis com diversas chaves/dados
 
  	> echo info['idade']; -> Mostrará a idade 23
 
-## concatenação de variáveis em PHP
+## concatenação de variáveis/constantes em PHP
 ### usa destas formas =
-- texto, ponto(.) e variável ou constante
-	> 'texto'.$Variavel
+- aspas simples -> texto, ponto(.) e variável ou constante
+	> echo 'texto'.$Variavel
 
-	> 'texto'.CONSTANTE;
+	> echo 'texto'.CONSTANTE;
 
 -  variavel o constante, ponto, variável ou constante
-	> $frase.$nome;
+	> echo $frase.$nome;
  	
-	> FRASE.NOME;
+	> echo FRASE.NOME;
 - o ponto (.) concatena
+- aspas duplas -> texto e variável ou constante
+	> echo "texto $Variavel";
+
+	> echo "texto CONSTANTE";
