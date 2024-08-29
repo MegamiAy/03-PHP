@@ -14,11 +14,13 @@
 	> print_r($_SERVER); -> Mostrará todas as informações/dados dentro da var
 
 > $nome = 'Junior'; -> Insere um valor/dado dentro da var
+
 > $idade = 24; -> Mesma coisa, porém com um número, sem ''... '' ou "" cria uma string
 
 ### uma var também pode receber outra var
 
 > $var2 = 'texto';
+
 > $var1 = $var2;
 
 ### concatenação de variáveis
@@ -48,6 +50,7 @@ desta forma =
 - quando um valor/conteúdo é definido ele não pode ser alterado tentando definir outro
 - ex:
 	> define('NOME', 'Junior');
+
  	> define('NOME', 'Marcelo');
 - o valor inicial da constante é Junior, e não será alterado/substituido pelo Marcelo
 - por senso, a constante é criada com o nome dela sendo em maiúsculo
@@ -64,4 +67,5 @@ Variáveis com diversas chaves/dados
  - as posições da array se iniciam em 0... **ex:** `[0, 1, 2, 3]` = 4 valores
  - para puxar apenas um dado de dentro dessa array, você pega a posição
 	> echo $nome['0']; -> Mostrará o nome Junior
+
  	> echo $nome['2']; -> Mostrará o nome Felipe
