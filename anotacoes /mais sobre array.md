@@ -47,5 +47,12 @@ este código mostrará isso:
 - basicamente, arrays demtro de arrays
 ### como criar/armazenar e como usar
 - variavel que vai armazenar, recebe(=), array e array
-    >
+	> $array = array(array('Joao', 'Guilherme'), array(23, 45));
 - variavel, indice e indice
+	> echo $array = [0][0]; -> Mostrará Guilherme
+ 
+	> echo $array = [0][1]; -> Mostrará Joao
+ 
+	> echo $array = [1][0]; -> Mostrará 23
+ 
+	> echo $array = [1][1]; -> Mostrará 45
