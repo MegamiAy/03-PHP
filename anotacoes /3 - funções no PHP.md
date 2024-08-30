@@ -8,4 +8,11 @@ são funções que fazem parte do PHP... como:
 - print_r() ➔ printar os conteúdos, por exemplo, todos os itens dentro de uma variável em tela;
 - define() ➔ definir uma constante.
 
+### criando funções
+
+### instanciar desta forma
+- function, nome função, (parâmetros ou não)
   
+	    function mostrarNome(){
+            // código
+      }
