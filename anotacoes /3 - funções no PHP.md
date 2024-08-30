@@ -6,7 +6,9 @@ são funções que fazem parte do PHP... como:
 - sleep(x) ➔ o servidor/códgio dorme/retarda até o tempo x passar;
 - count() ➔ contador, para contar por exemplo quantos itens existem dentro de uma array;
 - print_r() ➔ printar os conteúdos, por exemplo, todos os itens dentro de uma variável em tela;
-- define() ➔ definir uma constante.
+- define() ➔ definir uma constante;
+- include() ➔ incluir outro arquivo no doc atual.
+	ex: include('header.php');
 
 ### criando funções
 
@@ -14,5 +16,5 @@ são funções que fazem parte do PHP... como:
 - function, nome função, (parâmetros ou não)
   
 	    function mostrarNome(){
-            // código
-      }
+	    	// código
+	    }
