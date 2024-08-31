@@ -42,7 +42,7 @@ caso tente usar fora, vai dar erro, pois está tudo privado
 &
 
           class Pessoa{
-              // Classe pessoa
+              // Classe Pessoa
 
               public $nome = 'Julia';
               public $idade = '23';
@@ -59,12 +59,12 @@ caso tente usar fora, vai dar erro, pois está tudo privado
           }
 caso tente usar fora, vai retornar = estou comendo estou crescendo
 
-### diferença entre private e public
-- private -> ele é privado
-- public -> 
+### diferença entre private, public e static
+- private -> ele é privado, só pode ser utilizado dentro da própria classe
+- public -> ele é publico, pode ser utilizado em qualquer lugar
+- static -> ela não é acessivel pelo objeto
 
-
-como chamar/usar fora da classe
+### como chamar/usar da classe
 
 - instanciando:
 - objeto recebe(=) classe
@@ -75,4 +75,8 @@ como chamar/usar fora da classe
 
 como chamar/usar dentro da classe
 - usando:
-    > $this->comer
+    > $this->comer();
+
+- usando estatico
+    > Pessoa::$var;
+    > Pessoa::metodoEstatico();
