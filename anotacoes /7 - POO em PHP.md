@@ -2,9 +2,12 @@
 
 ### explicação de OO em um geral
 
-Objeto
+Classe
   - Atributos
   - Métodos
+
+$objeto->método();
+
 Exemplo sem usar PHP:
 
         Pessoa {
@@ -20,38 +23,56 @@ Exemplo sem usar PHP:
 Exemplo usando PHP:
 
           class Pessoa{
-              // Objeto pessoa
+              // Classe pessoa
 
               private $nome = 'Julia';
               private $idade = '23';
               private $altura = '1.75m'
 
-              private function crescer(){
-                // cod
+              private function crescer(){echo 
+                  'estou crescendo';
               }
 
               private function comer(){
-                // cod
+                echo 'estou comendo';
               }
           }
+caso tente usar fora, vai dar erro, pois está tudo privado
+
 &
 
           class Pessoa{
-              // Objeto pessoa
+              // Classe pessoa
 
               public $nome = 'Julia';
               public $idade = '23';
               public $altura = '1.75m'
 
               public function crescer(){
-                // cod
+                $this->comer();
+                echo 'estou crescendo';
               }
 
-              public function comer(){
-                // cod
+              private function comer(){
+                echo 'estou comendo';
               }
           }
+caso tente usar fora, vai retornar = estou comendo estou crescendo
 
 ### diferença entre private e public
+- private -> ele é privado
+- public -> 
 
--
+
+como chamar/usar fora da classe
+
+- instanciando:
+- objeto recebe(=) classe
+    > $pessoa = new Pessoa;
+- usando:
+- **->** acessa o método dentro do objeto
+    > $pessoa->crescer();
+
+como chamar/usar dentro da classe
+- usando:
+    > $this->comer
