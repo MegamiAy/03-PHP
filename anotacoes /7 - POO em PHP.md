@@ -80,3 +80,35 @@ como chamar/usar dentro da classe
 - usando estatico
     > Pessoa::$var;
     > Pessoa::metodoEstatico();
+
+## Mais
+
+Exemplo.php
+
+         class Exemplo{
+              private $var1;
+              public $var2;
+
+              public function setVar1($var1){
+                  $this->var1 = $var1;
+              }
+
+              public function pegaVar1(){
+                 return $this->var1;
+              }
+          
+          }
+
+index.php 
+
+          include('Exemplo.php');
+
+          $exemplo = new Exemplo();
+          $exemplo->setVar1('Junior');
+          echo $exemplo->pegaVar1();
+
+          $exemplo2 = new Exemplo;
+          $exemplo2->setVar1('Ana');
+          echo $exemplo2->pegaVar1();
+
+saida disso: JuniorAna
