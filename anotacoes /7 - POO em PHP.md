@@ -112,3 +112,49 @@ index.php
           echo $exemplo2->pegaVar1();
 
 saida disso: JuniorAna
+
+### final class
+essa classe não pode ser herdada
+
+### herança
+é a extensão de outra classe
+
+Exemplo de herança: classe filha é uma extensão da classe mãe
+
+		class Mae {
+
+			public function mostraOla(){
+				echo 'Mãe';
+			}			
+
+		}
+
+		class Filha extends Mae(){
+			
+			public function mostraTchau(){
+				echo 'Filha';
+			}
+
+		}
+
+
+Exemplo de final class (que não pode ser extendida):
+
+		final class Filha {
+
+			public function mostraOla(){
+				echo 'Ola mundo';
+			}			
+
+		}
+
+		class Pai extends Filha(){
+			
+			public function mostraTchau(){
+				echo 'Tchau mundo';
+			}
+
+		}
+
+
+### protected
