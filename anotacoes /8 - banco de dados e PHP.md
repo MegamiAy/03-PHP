@@ -68,7 +68,7 @@ tabela2 -> medicos
 - SELECT * FROM cliente WHERE Codigo="1";
 
       $sql =	'SELECT * INTO cliente '.
-              'WHERE Codigo="'.$Cod.'"';
+              	'WHERE Codigo="'.$Cod.'"';
 
 ### UPDATE
 > UPDATE table_name
@@ -80,8 +80,8 @@ tabela2 -> medicos
 - UPDATE clientes SET Nome="Luana", Idade="25" WHERE Codigo="1";
 
        $sql =	'UPDATE cliente '.
-        			' SET Nome="'.$nome.'", '.
-        			' Idade="'.$idade.'", '.
+		' SET Nome="'.$nome.'", '.
+		' Idade="'.$idade.'", '.
               ' WHERE Codigo="'.$codigo.'"';
 
 ### DELETE
@@ -92,11 +92,12 @@ tabela2 -> medicos
 - DELETE FROM cliente WHERE Codigo="1";
 
       $sql =	'DELETE FROM cliente '.
-    			    ' WHERE Codigo="'.$codigo.'"';
+		 ' WHERE Codigo="'.$codigo.'"';
 
 ### feachAll
 retorna um array contendo todas os registros no conjunto de resultados
-### inner join
+
+### INNER JOIN
 permite a junção entre duas ou mais tabelas,
 
 > table1 INNER JOIN table2
@@ -105,3 +106,29 @@ permite a junção entre duas ou mais tabelas,
 
       $sql =	'SELECT * FROM cliente cli INNER JOIN medico med'.
 		' ON cli.medico_codigo';
+
+### GROUP BY 
+> SELECT column_name(s)
+
+> FROM table_name
+
+> WHERE condition
+
+> GROUP BY column_name(s);
+
+       $sql =	'SELECT * FROM cliente '.
+              	' WHERE Codigo="'.$codigo.'" '.
+	       	' GROUP BY Nome';
+
+### ORDER BY
+> SELECT column_name(s)
+
+> FROM table_name
+
+> WHERE condition ASC|DESC
+
+> ORDER BY column_name(s);
+
+	$sql =	'SELECT * FROM cliente '.
+              	' WHERE Codigo="'.$codigo.'" '.
+	       	' ORDER BY Nome DESC';
