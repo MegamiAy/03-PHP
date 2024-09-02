@@ -174,3 +174,5 @@ retorna todos os registros da tabela direita e os registros correspondentes da t
 > FROM table_name
 
 > WHERE column LIKE pattern;
+
+pattern = %g%		<- qualquer registro que tenha `g`
