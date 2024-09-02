@@ -22,15 +22,21 @@ a classe nativa do PHP que gerencia banco de dados e puxa todos os dados prontos
 - senha da phpmyadmin, etc -> '' (vazia)
       > $pdo = new PDO('mysql:host=localhost;dbname=base_tal','root', '');
 
-## INSERT, SELECT, UPDATE e DELETE
+## INSERT, SELECT, UPDATE, DELETE e Mais
 
 Exemplo de tabela que vai ser usado nos outros exemplos
 
 tabela -> cliente 
-- Codigo
+- cliente_codigo
 - Nome
 - Sobrenome
 - Idade
+
+tabela2 -> medicos
+- medico_codigo
+- Nome
+- Sobrenome
+- Especializacao
 
 ### INSERT
 
@@ -87,3 +93,15 @@ tabela -> cliente
 
       $sql =	'DELETE FROM cliente '.
     			    ' WHERE Codigo="'.$codigo.'"';
+
+### feachAll
+retorna um array contendo todas os registros no conjunto de resultados
+### inner join
+permite a junção entre duas ou mais tabelas,
+
+> table1 INNER JOIN table2
+
+- SELECT * FROM cliente INNER JOIN medico;
+
+      $sql =	'SELECT * FROM cliente cli INNER JOIN medico med'.
+		' ON cli.medico_codigo';
