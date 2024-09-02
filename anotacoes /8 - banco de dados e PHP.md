@@ -46,17 +46,17 @@ tabela2 -> medicos
 
 - INSERT INTO cliente (Codigo, Nome, Sobrenome, Idade) VALUES (1, 'Luna', 'Cavall', 24);
 
-	  $cod = $_POST['cod'];
+	 	$cod = $_POST['cod'];
 		$nome = $_POST['nome'];
 		$sobrenome = $_POST['sobrenome'];
 		$idade = $_POST['idade'];
 
-		$sql =	'INSERT INTO cliente (Codigo, Nome, Sobrenome, Idade)'.
-      			'VALUES ( Codigo="'.$Cod.'" '.
-      			' Nome="'.$nome.'", '.
-      			' Sobrenome="'.$sobrenome.'", '.
-      			' Idade="'.$idade.'"'.
-      			' )';
+		$sql ='INSERT INTO cliente (Codigo, Nome, Sobrenome, Idade)'.
+			'VALUES ( Codigo="'.$Cod.'" '.
+			' Nome="'.$nome.'", '.
+			' Sobrenome="'.$sobrenome.'", '.
+			' Idade="'.$idade.'"'.
+			' )';
 
 ### SELECT
 > SELECT column ou * (todas colunas)
@@ -68,7 +68,7 @@ tabela2 -> medicos
 - SELECT * FROM cliente WHERE Codigo="1";
 
       $sql =	'SELECT * INTO cliente '.
-              	'WHERE Codigo="'.$Cod.'"';
+	  	'WHERE Codigo="'.$Cod.'"';
 
 ### UPDATE
 > UPDATE table_name
@@ -80,8 +80,8 @@ tabela2 -> medicos
 - UPDATE clientes SET Nome="Luana", Idade="25" WHERE Codigo="1";
 
        $sql =	'UPDATE cliente '.
-		' SET Nome="'.$nome.'", '.
-		' Idade="'.$idade.'", '.
+			' SET Nome="'.$nome.'", '.
+			' Idade="'.$idade.'", '.
               ' WHERE Codigo="'.$codigo.'"';
 
 ### DELETE
@@ -92,7 +92,7 @@ tabela2 -> medicos
 - DELETE FROM cliente WHERE Codigo="1";
 
       $sql =	'DELETE FROM cliente '.
-		 ' WHERE Codigo="'.$codigo.'"';
+		 	' WHERE Codigo="'.$codigo.'"';
 
 ### feachAll
 retorna um array contendo todas os registros no conjunto de resultados
@@ -106,9 +106,9 @@ retorna um array contendo todas os registros no conjunto de resultados
 
 > GROUP BY column_name(s);
 
-       $sql =	'SELECT * FROM cliente '.
-              	' WHERE Codigo="'.$codigo.'" '.
-	       	' GROUP BY Sobrenome';
+      $sql ='SELECT * FROM cliente '.
+        	' WHERE Codigo="'.$codigo.'" '.
+		' GROUP BY Sobrenome DESC';
 
 ### ORDER BY
 > SELECT column_name(s)
@@ -132,7 +132,7 @@ permite a junção entre duas ou mais tabelas
 - SELECT * FROM cliente INNER JOIN medico;
 
       $sql =	'SELECT * FROM cliente cli INNER JOIN medico med'.
-		' ON cli.medico_codigo';
+			' ON cli.medico_codigo';
 
 
 ### LEFT JOIN
