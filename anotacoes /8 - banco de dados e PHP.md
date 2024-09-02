@@ -40,6 +40,18 @@ tabela -> cliente
 
 - INSERT INTO cliente (Codigo, Nome, Sobrenome, Idade) VALUES (1, 'Luna', 'Cavall', 24);
 
+	  $cod = $_POST['cod'];
+		$nome = $_POST['nome'];
+		$sobrenome = $_POST['sobrenome'];
+		$idade = $_POST['idade'];
+
+		$sql =	'INSERT INTO cliente (Codigo, Nome, Sobrenome, Idade)'.
+      			'VALUES ( Codigo="'.$Cod.'" '.
+      			' Nome="'.$nome.'", '.
+      			' Sobrenome="'.$sobrenome.'", '.
+      			' Idade="'.$idade.'"'.
+      			' )';
+
 ### SELECT
 > SELECT column ou * (todas colunas)
 
@@ -48,6 +60,9 @@ tabela -> cliente
 > WHERE condition;
 
 - SELECT * FROM cliente WHERE Codigo="1";
+
+      $sql =	'SELECT * INTO cliente '.
+              'WHERE Codigo="'.$Cod.'"';
 
 ### UPDATE
 > UPDATE table_name
@@ -58,9 +73,17 @@ tabela -> cliente
 
 - UPDATE clientes SET Nome="Luana", Idade="25" WHERE Codigo="1";
 
+       $sql =	'UPDATE cliente '.
+        			' SET Nome="'.$nome.'", '.
+        			' Idade="'.$idade.'", '.
+              ' WHERE Codigo="'.$codigo.'"';
+
 ### DELETE
 > DELETE FROM table_name
 
 > WHERE condition;
 
 - DELETE FROM cliente WHERE Codigo="1";
+
+      $sql =	'DELETE FROM cliente '.
+    			    ' WHERE Codigo="'.$codigo.'"';
