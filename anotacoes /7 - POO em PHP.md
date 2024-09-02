@@ -119,7 +119,8 @@ essa classe não pode ser herdada
 ### herança
 é a extensão de outra classe
 
-Exemplo de herança: classe filha é uma extensão da classe mãe
+#### Exemplo de herança: classe filha é uma extensão da classe mãe
+vai ocorrer tudo certo, não há erro
 
 		class Mae {
 
@@ -138,7 +139,8 @@ Exemplo de herança: classe filha é uma extensão da classe mãe
 		}
 
 
-Exemplo de final class (que não pode ser extendida):
+#### Exemplo de final class (que não pode ser extendida):
+vai ocorreu um erro, dizendo que a classe pai não  pode herdar a classe filha
 
 		final class Filha {
 
@@ -158,3 +160,76 @@ Exemplo de final class (que não pode ser extendida):
 
 
 ### protected
+acessível a partir de todas as classes no mesmo pacote e a partir de qualquer subclasse em qualquer lugar
+
+### abstract 
+pode apenas ser herdada, não pode ser instanciada
+
+		abstract class Teste{
+
+ 			public function func1(){
+    				echo 'chamando função 1';
+			}
+
+			public function func2();
+   
+		}
+
+		class Principal extends Teste {
+
+			public function func2(){
+   				echo 'estou declarando ofc o metodo abstrato';
+			}
+       
+		}
+
+  		$principal = new Principal;
+    		$principal->func1();
+    		$principal->func2();
+
+assim vai  funcionar...
+
+### interface
+
+index.php
+
+		include('interface1.php');
+
+  		class Teste implement Interface1 {
+    			public funtion EscrevaNaTela($par){
+       				echo $par;
+			}
+		}
+
+  		$teste = new Teste;
+
+    		$teste->EscrevaNaTela('Olá Mundo');
+
+interface1.php
+
+		interface Interface1{
+  			public funtion EscrevaNaTela($par);
+		}
+
+### métodos "mágicos"
+
+#### método construtor
+a partir do momento que a classe for instanciada/chamada o método contruct é o primeiro que vai ser buscado, sem precisar ser chamado
+
+Classe.php
+
+		class Classe {
+			private $nome;
+   			private $idade;
+         
+			public function __construct($Nome, $Idade){
+   				$this->nome = $Nome;
+       				$this->idade = $Idade;
+			}
+   	
+		}
+
+  index.php
+
+  		include('Classe.php');
+    		$teste = new Classe('Gui', 23);
