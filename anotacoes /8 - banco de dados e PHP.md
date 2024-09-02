@@ -158,3 +158,19 @@ retorna todos os registros da tabela direita e os registros correspondentes da t
 > ON table1.column_name = table2.column_name;
 
 - SELECT * FROM cliente RIGHT JOIN medico;
+
+### LIMIT
+> SELECT column_name(s)
+
+> FROM table_name
+
+> WHERE condition
+
+> LIMIT number;
+
+### LIKE
+> SELECT column1, column2, ...
+
+> FROM table_name
+
+> WHERE column LIKE pattern;
