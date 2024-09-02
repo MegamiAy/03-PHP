@@ -233,3 +233,56 @@ Classe.php
 
   		include('Classe.php');
     		$teste = new Classe('Gui', 23);
+
+## Autoload
+pasta_pricipal/
+- classes/
+	- Utilidades.php
+	- Home/
+		- Inicia.php
+- index.php
+
+
+Inicia.php
+
+  		namespace Home;
+
+		class Inicia {
+  			function __construct(){
+     				'Classe inicia chamada com sucesso';
+			}
+		}
+
+Utilidades.php
+
+		class Utilidades {
+  			function __construct(){
+     				echo 'Classe utilidades chamada com sucesso';
+			}
+		}
+
+  index.php
+
+  		function myAutoLoad($class){
+			$class = str_replace('\\', '/', $class);
+    
+    			if(file_exists('classes/'.$class.'.php')){
+       				include('classes/'.$class.'.php');
+			}
+		}
+
+  		spl_autoload_register('myAutoLoad');
+
+    		new Utilidades();
+
+      		new Home\Inicia();
+
+ ## constantes 
+já tem um doc que fala de constantes, mas aqui é uma nova forma em OO
+
+ 		class minhaClasse {
+   
+   			const VALOR = 300;
+      
+     		}
+ 
