@@ -1,6 +1,6 @@
 ## manipulação de arquivos em PHP
 
-### chegar se existe
+### checar se existe
 `file_exists('arquivo.txt');`
 
 ### criar arquvio e mudar conteúdo do arquivo
@@ -18,23 +18,23 @@
 
 ## manipulação de diretórios em PHP
 
-### muda o diretório
-`chdir - `
+### criar o diretório
+`mkdir('pasta');`
 
-### muda o diretório raiz
-`chroot - `
+### checar se existe
+`is_dir('pasta');`
+
+### deleta o diretório
+`rmdir('pasta');`
+
+### lista os arquivos e diretórios do caminho
+`scandir('pasta');`
+
+### muda o diretório
+`chdir`
 
 ### abre o manipulador de diretório
-`opendir - `
+`opendir('pasta');`
 
 ### fecha o manipulador de diretório
-`closedir - `
-
-### retornar instancia do diretório
-`dir - `
-
-### obter o diretório atual
-`getcwb - `
-
-### lista os arquivos e diretórios no caminho especificado
-`scandir - `
+`closedir('pasta');`
