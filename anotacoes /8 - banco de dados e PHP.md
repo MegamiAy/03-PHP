@@ -97,16 +97,6 @@ tabela2 -> medicos
 ### feachAll
 retorna um array contendo todas os registros no conjunto de resultados
 
-### INNER JOIN
-permite a junção entre duas ou mais tabelas,
-
-> table1 INNER JOIN table2
-
-- SELECT * FROM cliente INNER JOIN medico;
-
-      $sql =	'SELECT * FROM cliente cli INNER JOIN medico med'.
-		' ON cli.medico_codigo';
-
 ### GROUP BY 
 > SELECT column_name(s)
 
@@ -118,7 +108,7 @@ permite a junção entre duas ou mais tabelas,
 
        $sql =	'SELECT * FROM cliente '.
               	' WHERE Codigo="'.$codigo.'" '.
-	       	' GROUP BY Nome';
+	       	' GROUP BY Sobrenome';
 
 ### ORDER BY
 > SELECT column_name(s)
@@ -130,5 +120,41 @@ permite a junção entre duas ou mais tabelas,
 > ORDER BY column_name(s);
 
 	$sql =	'SELECT * FROM cliente '.
-              	' WHERE Codigo="'.$codigo.'" '.
-	       	' ORDER BY Nome DESC';
+        	' WHERE Codigo="'.$codigo.'" '.
+		' ORDER BY Nome DESC';
+
+  
+### INNER JOIN
+permite a junção entre duas ou mais tabelas
+
+> table1 INNER JOIN table2
+
+- SELECT * FROM cliente INNER JOIN medico;
+
+      $sql =	'SELECT * FROM cliente cli INNER JOIN medico med'.
+		' ON cli.medico_codigo';
+
+
+### LEFT JOIN
+retorna todos os registros da tabela esquerda e os registros correspondentes da tabela direita
+> SELECT column_name(s)
+
+> FROM table1
+
+> LEFT JOIN table2
+
+> ON table1.column_name = table2.column_name;
+
+- SELECT * FROM cliente LEFT JOIN medico;
+
+### RIGHT JOIN
+retorna todos os registros da tabela direita e os registros correspondentes da tabela esquerda
+> SELECT column_name(s)
+
+> FROM table1
+
+> RIGHT JOIN table2
+
+> ON table1.column_name = table2.column_name;
+
+- SELECT * FROM cliente RIGHT JOIN medico;
