@@ -18,7 +18,7 @@ requisições parar outros servidores
 
           $endereco = jso_decode($str);
 
-          echo $endereco->results->address_components[0]->short_name;
+          echo $endereco->results[0]->address_components[0]->short_name;
           
     }
     
