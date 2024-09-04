@@ -29,6 +29,8 @@
 			'oauth_uid' => $fbUserProfile['id'],
 			'first_name' => $fbUserProfile['first_name'],
 			'last_name' => $fbUserProfile['last_name'],
+			'email' => $fbUserProfile['email'],
+			'imagem' => $fbUserProfile['picture']['url'],
 		];
 	
 		$userData = $fbUserData;
@@ -40,7 +42,9 @@
 		if(!empty($userData)){
 			$output = ''; 
 			$output.= "<h1>Nome: $userData['first_name'] </h1>";
-			$output.= "<h1>Sobrenome: $userData['last_name']"</h1>;
+			$output.= "<h1>Sobrenome: $userData['last_name']</h1>";
+			$output.= "<h1>Email: $userData['email']</h1>";
+			$output.= '<img src="'.$userData['imagem'].'"/>';
 			$output.= '<br /><a href="'.$logoutUrl.'">loggout</a>';
 		} else {
 			$output = '<h1 style="color:red">Ocorreu um erro!</h1>';
