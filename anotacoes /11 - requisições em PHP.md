@@ -21,4 +21,3 @@ requisições parar outros servidores
           echo $endereco->results[0]->address_components[0]->short_name;
           
     }
-    
