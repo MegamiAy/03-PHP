@@ -14,7 +14,7 @@
       		<div id="sobre_section">
       			<h3>Sobre</h3>
       			<form method="POST">
-      			      <!--        label          -->
+      			<!--        label          -->
               		<!--        Textarea   name="sobre"       -->
               		<!--        input hidden name="editar_sobre"   value=""    -->        			<!--        button submit name="acao"    -->
               		</form>
