@@ -16,7 +16,8 @@
       			<form method="POST">
       			<!--        label          -->
               		<!--        Textarea   name="sobre"       -->
-              		<!--        input hidden name="editar_sobre"   value=""    -->        			<!--        button submit name="acao"    -->
+              		<!--        input hidden name="editar_sobre"   value=""    -->
+			<!--        button submit name="acao"    -->
               		</form>
       		</div>
       	</div>
