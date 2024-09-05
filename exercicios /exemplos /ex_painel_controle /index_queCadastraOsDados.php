@@ -1,3 +1,9 @@
+<?php
+
+$pdo = new PDO('mysql')
+
+?>
+
 <html>
     <head></head>
     <body>
@@ -7,6 +13,9 @@
 
               if(isset($_POST['editar_sobre'])){
                 $sobre = $_POS['sobre'];
+		$pdo->exec("DELETE FROM `tb_sobre`");
+		$sql = $pdo->prepare("INSERT INTO `tb_sobre` VALUES(null, ?)");
+		$sql->execute(array($sobre));
                 echo '<div class="alert alert-success" role="alert">O código HTML <b>Sobre</b> foi editado com sucesso!</div>'
               }
         
