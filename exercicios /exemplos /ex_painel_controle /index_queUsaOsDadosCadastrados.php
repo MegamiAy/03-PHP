@@ -11,12 +11,6 @@
     <head></head>
     <body>
     	<div id="sobre"><?php echo $sobre; ?></div>
-        <form method="POST">
-            <!--       input       -->
-            <!--       input       -->
-            <!--       input       -->
-            <!--       button  submit     -->
-        </form>
     </body>
 </html>
 
