@@ -9,6 +9,7 @@
     <head></head>
     
 <!--  outro index.php	 -->
+<!-- pdo  -->
 <!--    Home   --> 
  	<div id="sobre"><?php echo $sobre; ?></div
  	<div id="equipe">
@@ -88,7 +89,7 @@
 					<tr>
 						<td><?php echo $value['id']?></td>
 						<td><?php echo $value['nome']?></td>
-						<td><!-- button com icon. para deletar --></td>
+						<td><button class="deletar-membro" id_membro="<?php echo $value['id']; ?>" type="submit">Excluir</td>
 					</tr>
 					<?php } ?>
 				</tbody>
@@ -96,10 +97,29 @@
 
 		</div>
       	</div>
-	<div>
-		
-	</div>
     </body>
 </html>
 
-<script></script>
+<script>
+
+	$('button.deletar-membro').click(function(){
+		var id_membro = $(this).attr('id_membro');
+		$.ajax({
+			method: 'POST',
+			data: {'id_membro': id_membro},
+			url: 'deletar.php'
+		}).done(function(){
+			$(this).parent().parent().remove();
+		})
+	})
+	
+</script>
+
+<!-- outro arquivo php = deletar.php  -->
+<?php 
+	if(isset($_POST['id_membro'])){
+		$pdo = new PDO('mysql:host=localhost;dbname=projeto', 'root','');
+		$sql = $pdo->prepare("DELETE FROM `tb_equipe` WHERE id = ?");
+		$sql->execute(array($_POST['id_membro']));
+	}
+?>
