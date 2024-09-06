@@ -3,7 +3,7 @@
 
     class ContatoController{
 
-        public function execute(){
+        public function executar(){
             echo 'Página Contato sendo executada';
         }
 
