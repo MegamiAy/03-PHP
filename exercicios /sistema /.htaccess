@@ -1,0 +1,11 @@
+RewriteEngine On                                            # ativa o rewrite    
+RewriteCond %{SCRIPT_FILENAME} !-f                          # condiciona: se acessar o nome de um arquivo real, ele vai ser acessado
+RewriteCond %{SCRIPT_FILENAME} !-d                          # condiciona: se acessar o nome de um diretório real, ele vai ser acessado
+RewriteRole ^(.*)$ teste/_mvc/index.php?url=$1 [QSA,L]      # caso não seja acessado nada, ou seja, se a condição for falsa, ele ira redirecionar para o index
+
+// Options -Indexes
+
+// RewriteEngine On                                                          
+// RewriteCond %{REQUEST_FILENAME} !-f                             
+// RewriteCond %{REQUEST_FILENAME} !-d                             
+// RewriteRule ^(.*)$ /php7/teste/_mvc/index.php?url=$1 [QSA,L]    
