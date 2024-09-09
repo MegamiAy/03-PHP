@@ -13,7 +13,7 @@
             $this->footer = $footer;
         }
 
-        public function render(){
+        public function render($arr = array()){
             include('pages/templates/'.$this->header.'.php');
             include('pages/'.$this->viewName.'.php');
             include('pages/templates/'.$this->footer.'.php');
