@@ -1,11 +1,12 @@
 <?php
     namespace Controllers;
-    class HomeController{
+    use Views\HomeView;
 
-        public function executar(){
-            echo 'opa';
+    class HomeController extends Controller{
+
+        public function __construct(){
+            $this->view = new HomeView('home');
         }
 
     }
-
 ?>
