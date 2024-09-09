@@ -7,7 +7,7 @@
 </head>
 <body>
 <header>
-    <div class="center">
+    <menu>
         <nav class="menu">
             <ul>
             <?php
@@ -17,7 +17,5 @@
             ?>
             </ul>
         </nav>
-    </div> <!-- center -->
+    </menu> <!-- menu -->
 </header>
-
-
