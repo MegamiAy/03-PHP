@@ -8,6 +8,10 @@
             $this->view = new MainView('home');
         }
 
+        public function executar(){             
+            $this->view->render(array('titulo'=>'Home'));
+        }
+
     }
 
 ?>
