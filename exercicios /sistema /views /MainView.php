@@ -6,6 +6,8 @@
         private $viewName;
         private $header;
         private $footer;
+        // const TITULO = 'Projeto MVC'; 
+        public $menuItems = array('Home', 'Contato', 'Sobre');
 
         public function __construct($viewName, $header = 'header', $footer = 'footer'){
             $this->viewName = $viewName;
