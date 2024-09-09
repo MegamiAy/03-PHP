@@ -1,5 +1,5 @@
 <?php
-    namespace controllers;
+    namespace Controllers;
     class HomeController{
 
         public function executar(){
