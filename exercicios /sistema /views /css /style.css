@@ -4,7 +4,8 @@
 :root {
     --font: "Roboto Mono", monospace;
     --cor1: #373241;
-    --cor2: white;
+    --cor2: #232029;
+    --cor3: white;
 }
 
 /* global */
@@ -18,10 +19,24 @@
 
 body{
     background-color: var(--cor1);
-    color: var(--cor2);
+    color: var(--cor3);
+}
+
+/* header */
+nav {
+    height: 55px;
+}
+
+nav li {
+        display: inline-block;
 }
 
 nav a {
-    color: var(--cor2);
+    color: var(--cor3);
     text-decoration: none;
+}
+
+nav li:hover {
+    background-color: var(--cor2);
+    height: 55px;
 }
