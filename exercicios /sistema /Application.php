@@ -1,4 +1,5 @@
 <?php
+    define('INCLUDE_PATH','http://127.0.0.1:8080/simples/teste_mvc/');
     define('INCLUDE_PATH_FULL','http://127.0.0.1:8080/simples/teste_mvc/views/pages/');
 
     class Application{
