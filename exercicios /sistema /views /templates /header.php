@@ -8,15 +8,14 @@
 <body>
 <header>
     <div class="center">
-        <div class="logo">
-            <h1> :) </h1>
-        </div> <!-- logo -->
         <nav class="menu">
+            <ul>
             <?php
                 foreach($this->menuItems as $key => $value){
-                    echo '<a href="'.INCLUDE_PATH.strtolower($value).'"> '.$value.' </a>';
+                    echo '<li><a href="'.INCLUDE_PATH.strtolower($value).'"> '.$value.' </a></li>';
                 }
             ?>
+            </ul>
         </nav>
     </div> <!-- center -->
 </header>
