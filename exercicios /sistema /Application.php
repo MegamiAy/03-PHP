@@ -1,13 +1,13 @@
 <?php
-    class Application {
+    class Application{
 
         public function executar(){
-            $url = isset($_GET['url']) ? explode('/',$_GET['url'])[0] : 'Home';
-            $url = ucfirst($url);
-            $url."Controller";
+            $url = isset($_GET['url']) ? explode('/', $_GET['url']) : array('Home');
+            $url = ucfirst($url[0]);
+            $url .= "Controller";
 
             if(file_exists('controllers/'.$url.'.php')){
-                $className = 'controllers\\'.$url;
+                $className = 'Controllers\\'.$url;
                 $controller = new $className();
                 $controller->executar();
             } else {
