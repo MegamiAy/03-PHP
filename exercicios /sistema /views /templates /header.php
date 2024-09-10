@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title><?php echo $arr['titulo']; ?></title>
-    <link href="<?php echo INCLUDE_PATH_FULL ?>css/style.css" rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo INCLUDE_PATH_FULL ?>css/style.css?v=<?php echo time(); ?>">
+
 </head>
 <body>
 <header>
