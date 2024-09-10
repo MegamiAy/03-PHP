@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* variaveis */
+:root {
+    --font: "Roboto Mono", monospace;
+    --cor1: #373241;
+    --cor2: #232029;
+    --cor3: white;
+}
+
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+
+body{
+    background-color: var(--cor1);
+    color: var(--cor3);
+}
+
+/* header */
+
+menu {
+    background-color: var(--cor2);
+    height: 55px; 
+}
+
+nav {
+    /* max-width: 1000px; */
+    margin: auto;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+}
+
+menu li a {
+    color:var(--cor3);
+    text-decoration: none;
+    display: block;
+    padding: 0 30px;
+}
+
+
+menu li a:hover {
+    background-color: var(--cor1);
+    border-radius: 5px;
+}
+
+/* ... */
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    margin: auto auto;
+}
+
+.container2 {
+    text-align: center;
+    max-width: 800px;
+    margin: auto auto;
+}
+
+.container input[type=text], textarea {
+    border: none;
+    width: 90%;
+    margin: 8px;
+    height: 25px;
+}
+
+.container input[type=submit] {
+    width: 80%;
+    height: 28px;
+    cursor: pointer;
+    background-color: #10650d;
+    color: var(--cor3);
+}
+
+footer {
+    text-align: center;
+    display: none; /* dx assim por enquanto  */
+}
