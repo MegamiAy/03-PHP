@@ -39,6 +39,7 @@ pegar informações armazenadas no buffer
     ob_get_concents();
 
 ## variável de variável
+se lê da direita para esquerda
 
     $nome = "exemplo";
     $$nome = "guilherme";
