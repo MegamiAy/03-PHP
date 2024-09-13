@@ -51,7 +51,7 @@ saida: claudia
         echo 'a variável "$a" faz referência a classe "A"';
     }
 
-## callback
+## callback ou clousures
 
     function executar($a = "um", $b){
           $b($a);
@@ -60,3 +60,5 @@ saida: claudia
     executar(function($num){
         echo 'Num '.$num;
     });
+
+
