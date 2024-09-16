@@ -24,6 +24,7 @@
     echo teste(); // saida: 1 (true)
 
 ### com spaceship
+> <=>
 
     function teste(){ return  10<=>8; }
     echo $resultado; // <- saida: 1 (true)
