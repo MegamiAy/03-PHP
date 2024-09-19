@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /simples/suporte/index.php?url=$1 [QSA,L]
+
+# 1ª linha -> ativa o rewrite
+# 2ª linha -> condiciona: se acessar o nome de um arquivo real, ele vai ser acessado
+# 3ª linha -> condiciona: se acessar o nome de um diretório real, ele vai ser acessado
+# 4ª linha -> caso não seja acessado nada, ou seja, se a condição for falsa, ele ira redirecionar para o index
